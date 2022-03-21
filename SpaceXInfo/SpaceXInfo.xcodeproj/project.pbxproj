@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		86605F5527E8FC120055D463 /* Slide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86605F5427E8FC120055D463 /* Slide.swift */; };
+		86605F5C27E8FC800055D463 /* Slide.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86605F5B27E8FC800055D463 /* Slide.xib */; };
 		86807FAC27E773EF00F4C18D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86807FAB27E773EF00F4C18D /* AppDelegate.swift */; };
 		86807FAE27E773EF00F4C18D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86807FAD27E773EF00F4C18D /* SceneDelegate.swift */; };
 		86807FB027E773EF00F4C18D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86807FAF27E773EF00F4C18D /* ViewController.swift */; };
@@ -28,6 +30,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		86605F5427E8FC120055D463 /* Slide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slide.swift; sourceTree = "<group>"; };
+		86605F5B27E8FC800055D463 /* Slide.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Slide.xib; sourceTree = "<group>"; };
 		86807FA827E773EF00F4C18D /* SpaceXInfo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpaceXInfo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86807FAB27E773EF00F4C18D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		86807FAD27E773EF00F4C18D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +65,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		86605F5327E8FBD90055D463 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				86605F5427E8FC120055D463 /* Slide.swift */,
+				86605F5B27E8FC800055D463 /* Slide.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		86807F9F27E773EF00F4C18D = {
 			isa = PBXGroup;
 			children = (
@@ -80,6 +93,7 @@
 		86807FAA27E773EF00F4C18D /* SpaceXInfo */ = {
 			isa = PBXGroup;
 			children = (
+				86605F5327E8FBD90055D463 /* Views */,
 				86807FAB27E773EF00F4C18D /* AppDelegate.swift */,
 				86807FAD27E773EF00F4C18D /* SceneDelegate.swift */,
 				86807FAF27E773EF00F4C18D /* ViewController.swift */,
@@ -171,6 +185,7 @@
 				86807FB827E773F100F4C18D /* LaunchScreen.storyboard in Resources */,
 				86807FB527E773F100F4C18D /* Assets.xcassets in Resources */,
 				86807FB327E773EF00F4C18D /* Main.storyboard in Resources */,
+				86605F5C27E8FC800055D463 /* Slide.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,6 +203,7 @@
 				86807FE127E7881200F4C18D /* Payloads.swift in Sources */,
 				86807FE427E7883900F4C18D /* CompositeFairing.swift in Sources */,
 				86807FDB27E787C200F4C18D /* PayloadWeight.swift in Sources */,
+				86605F5527E8FC120055D463 /* Slide.swift in Sources */,
 				86807FD527E7879100F4C18D /* LandingLegs.swift in Sources */,
 				86807FC927E786DD00F4C18D /* Engines.swift in Sources */,
 				86807FCC27E7872500F4C18D /* ISP.swift in Sources */,

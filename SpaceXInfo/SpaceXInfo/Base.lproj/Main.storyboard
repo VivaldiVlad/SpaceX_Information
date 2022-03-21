@@ -16,19 +16,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="q7q-ze-iju">
-                                <rect key="frame" x="0.0" y="864" width="428" height="28"/>
-                                <color key="backgroundColor" white="0.15585587077400312" alpha="1" colorSpace="calibratedWhite"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nny-Ir-dVF">
+                                <rect key="frame" x="0.0" y="44" width="428" height="768"/>
+                            </scrollView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="oga-o4-Vdv">
+                                <rect key="frame" x="0.0" y="812" width="428" height="80"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </pageControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="linkColor"/>
+                        <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="q7q-ze-iju" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="jsW-OU-qQ2"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="q7q-ze-iju" secondAttribute="trailing" id="kRZ-2k-Qi1"/>
-                            <constraint firstItem="q7q-ze-iju" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ww0-5e-qih"/>
+                            <constraint firstItem="oga-o4-Vdv" firstAttribute="top" secondItem="Nny-Ir-dVF" secondAttribute="bottom" id="Fjm-gl-NEX"/>
+                            <constraint firstItem="Nny-Ir-dVF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="IJ8-fL-SGD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Nny-Ir-dVF" secondAttribute="bottom" constant="80" id="Pk9-Ae-8Dg"/>
+                            <constraint firstItem="oga-o4-Vdv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="SWf-Db-YV5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oga-o4-Vdv" secondAttribute="trailing" id="Wpa-kt-DVr"/>
+                            <constraint firstItem="Nny-Ir-dVF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ZP7-s6-LWK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Nny-Ir-dVF" secondAttribute="trailing" id="bNq-9f-mUA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="oga-o4-Vdv" secondAttribute="bottom" id="kHh-C4-wIv"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="pageControl" destination="oga-o4-Vdv" id="1To-ta-HQC"/>
+                        <outlet property="scrollView" destination="Nny-Ir-dVF" id="tsS-y7-Gf2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -36,8 +48,8 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="linkColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
