@@ -31,19 +31,23 @@ class ViewController: UIViewController {
                 }
                 
                 self.rockets = rocketArray
+                
+                DispatchQueue.main.async {
+                    self.slides = self.createSlides(self.rockets)
+                    self.setupSlideScrollView(slides: self.slides)
+                    self.pageControl.numberOfPages = self.slides.count
+                    self.pageControl.currentPage = 0
+                    self.view.bringSubviewToFront(self.pageControl)
+                }
                                         
             }
         }
         
         task.resume()
         
-        Thread.sleep(forTimeInterval: 15)
+//        Thread.sleep(forTimeInterval: 15)
         
-        self.slides = self.createSlides(self.rockets)
-        self.setupSlideScrollView(slides: self.slides)
-        self.pageControl.numberOfPages = self.slides.count
-        self.pageControl.currentPage = 0
-        self.view.bringSubviewToFront(self.pageControl)
+        
         
     }
     
