@@ -3,14 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8657A40927EDFFFE00F7C7CD /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 8657A40827EDFFFE00F7C7CD /* Kingfisher */; };
 		86605F5527E8FC120055D463 /* Slide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86605F5427E8FC120055D463 /* Slide.swift */; };
 		86605F5C27E8FC800055D463 /* Slide.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86605F5B27E8FC800055D463 /* Slide.xib */; };
 		86807FAC27E773EF00F4C18D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86807FAB27E773EF00F4C18D /* AppDelegate.swift */; };
-		86807FAE27E773EF00F4C18D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86807FAD27E773EF00F4C18D /* SceneDelegate.swift */; };
 		86807FB027E773EF00F4C18D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86807FAF27E773EF00F4C18D /* ViewController.swift */; };
 		86807FB327E773EF00F4C18D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86807FB127E773EF00F4C18D /* Main.storyboard */; };
 		86807FB527E773F100F4C18D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86807FB427E773F100F4C18D /* Assets.xcassets */; };
@@ -27,6 +27,8 @@
 		86807FDE27E787E600F4C18D /* SecondStage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86807FDD27E787E600F4C18D /* SecondStage.swift */; };
 		86807FE127E7881200F4C18D /* Payloads.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86807FE027E7881200F4C18D /* Payloads.swift */; };
 		86807FE427E7883900F4C18D /* CompositeFairing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86807FE327E7883900F4C18D /* CompositeFairing.swift */; };
+		86F80C0C27EBAA2500F36EEE /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F80C0B27EBAA2500F36EEE /* StartViewController.swift */; };
+		86F80C0F27EBABAC00F36EEE /* NetworkManage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F80C0E27EBABAC00F36EEE /* NetworkManage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,7 +36,6 @@
 		86605F5B27E8FC800055D463 /* Slide.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Slide.xib; sourceTree = "<group>"; };
 		86807FA827E773EF00F4C18D /* SpaceXInfo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpaceXInfo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86807FAB27E773EF00F4C18D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		86807FAD27E773EF00F4C18D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		86807FAF27E773EF00F4C18D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		86807FB227E773EF00F4C18D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		86807FB427E773F100F4C18D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -52,6 +53,8 @@
 		86807FDD27E787E600F4C18D /* SecondStage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondStage.swift; sourceTree = "<group>"; };
 		86807FE027E7881200F4C18D /* Payloads.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Payloads.swift; sourceTree = "<group>"; };
 		86807FE327E7883900F4C18D /* CompositeFairing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositeFairing.swift; sourceTree = "<group>"; };
+		86F80C0B27EBAA2500F36EEE /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		86F80C0E27EBABAC00F36EEE /* NetworkManage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8657A40927EDFFFE00F7C7CD /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,11 +99,12 @@
 			children = (
 				86605F5327E8FBD90055D463 /* Views */,
 				86807FAB27E773EF00F4C18D /* AppDelegate.swift */,
-				86807FAD27E773EF00F4C18D /* SceneDelegate.swift */,
 				86807FAF27E773EF00F4C18D /* ViewController.swift */,
 				86807FC127E7859700F4C18D /* Models */,
 				86807FB127E773EF00F4C18D /* Main.storyboard */,
 				86807FB427E773F100F4C18D /* Assets.xcassets */,
+				86F80C0B27EBAA2500F36EEE /* StartViewController.swift */,
+				86F80C0E27EBABAC00F36EEE /* NetworkManage.swift */,
 				86807FB627E773F100F4C18D /* LaunchScreen.storyboard */,
 				86807FB927E773F100F4C18D /* Info.plist */,
 			);
@@ -141,6 +146,9 @@
 			dependencies = (
 			);
 			name = SpaceXInfo;
+			packageProductDependencies = (
+				8657A40827EDFFFE00F7C7CD /* Kingfisher */,
+			);
 			productName = SpaceXInfo;
 			productReference = 86807FA827E773EF00F4C18D /* SpaceXInfo.app */;
 			productType = "com.apple.product-type.application";
@@ -168,6 +176,9 @@
 				Base,
 			);
 			mainGroup = 86807F9F27E773EF00F4C18D;
+			packageReferences = (
+				8657A40727EDFFFE00F7C7CD /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 86807FA927E773EF00F4C18D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -197,7 +208,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				86807FC327E7868900F4C18D /* RocketElement.swift in Sources */,
+				86F80C0C27EBAA2500F36EEE /* StartViewController.swift in Sources */,
 				86807FCF27E7874500F4C18D /* Thrust.swift in Sources */,
+				86F80C0F27EBABAC00F36EEE /* NetworkManage.swift in Sources */,
 				86807FB027E773EF00F4C18D /* ViewController.swift in Sources */,
 				86807FC627E786AF00F4C18D /* Diameter.swift in Sources */,
 				86807FE127E7881200F4C18D /* Payloads.swift in Sources */,
@@ -210,7 +223,6 @@
 				86807FAC27E773EF00F4C18D /* AppDelegate.swift in Sources */,
 				86807FD227E7876400F4C18D /* FirstStage.swift in Sources */,
 				86807FD827E787A500F4C18D /* Mass.swift in Sources */,
-				86807FAE27E773EF00F4C18D /* SceneDelegate.swift in Sources */,
 				86807FDE27E787E600F4C18D /* SecondStage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -415,6 +427,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8657A40727EDFFFE00F7C7CD /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8657A40827EDFFFE00F7C7CD /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8657A40727EDFFFE00F7C7CD /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 86807FA027E773EF00F4C18D /* Project object */;
 }

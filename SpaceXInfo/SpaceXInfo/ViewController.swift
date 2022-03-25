@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class ViewController: UIViewController {
 
@@ -46,9 +47,6 @@ class ViewController: UIViewController {
         task.resume()
         
 //        Thread.sleep(forTimeInterval: 15)
-        
-        
-        
     }
     
     func createSlides(_ array: [RocketElement]) -> [Slide] {
@@ -89,5 +87,4 @@ class ViewController: UIViewController {
             scrollView.addSubview(slides[i])
         }
     }
-
 }
