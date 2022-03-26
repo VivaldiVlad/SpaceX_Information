@@ -4,10 +4,11 @@ class MainViewController: UIViewController {
     //MARK: - properties
     private let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
-        layout.minimumLineSpacing = 5
         layout.scrollDirection = .horizontal
+        layout.minimumLineSpacing = 0
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
+        collectionView.isPagingEnabled = true
         return collectionView
     }()
     
@@ -73,5 +74,10 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
         let height = collectionView.frame.height
         
         return CGSize(width: width, height: height)
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let count = scrollView.contentOffset.x / UIScreen.main.bounds.size.width
+        self.pageControl.currentPage = Int(count)
     }
 }
