@@ -97,7 +97,7 @@ extension CustomCollectionViewCell: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        switch indexPath.section {
+        switch indexPath.row {
         case 0:
             return 200
             
@@ -115,5 +115,4 @@ extension CustomCollectionViewCell: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 15
     }
-    
 }
