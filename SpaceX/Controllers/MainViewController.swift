@@ -25,7 +25,6 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         addSubview()
         constraintsSetup()
-        navigationController?.navigationBar.isHidden = true
         collectionViewSetup()
     }
     

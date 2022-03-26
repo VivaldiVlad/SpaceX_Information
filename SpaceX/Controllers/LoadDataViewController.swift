@@ -6,7 +6,8 @@ class LoadDataViewController: UIViewController {
     //MARK: - lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.pushViewController(MainViewController(), animated: true)
+        let mainVC = MainViewController()
+        present(mainVC, animated: true, completion: nil)
     }
     
     //MARK: - methods
