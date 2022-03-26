@@ -50,6 +50,7 @@ class RocketCharacteristicTableViewCell: UITableViewCell {
     private func collectionViewSetup() {
         characteristicCollectionView.delegate = self
         characteristicCollectionView.dataSource = self
+        self.backgroundColor = .clear
         
         characteristicCollectionView.register(RocketCharacteristicCollectionViewCell.self, forCellWithReuseIdentifier: RocketCharacteristicCollectionViewCell.identifier)
     }
@@ -87,11 +88,12 @@ class RocketCharacteristicTableViewCell: UITableViewCell {
 
 extension RocketCharacteristicTableViewCell: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        return Characteristics.numberOfSections()
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let characteristicCell = collectionView.dequeueReusableCell(withReuseIdentifier: RocketCharacteristicCollectionViewCell.identifier, for: indexPath) as? RocketCharacteristicCollectionViewCell else { return UICollectionViewCell() }
+        characteristicCell.descriptionConfigure(item: indexPath.item)
         return characteristicCell
     }
     

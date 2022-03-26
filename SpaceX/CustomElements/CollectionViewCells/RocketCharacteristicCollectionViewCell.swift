@@ -18,7 +18,7 @@ class RocketCharacteristicCollectionViewCell: UICollectionViewCell {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .white
         label.textAlignment = .center
-        label.text = "Высота"
+        label.alpha = 0.5
         return label
     }()
     
@@ -55,5 +55,9 @@ class RocketCharacteristicCollectionViewCell: UICollectionViewCell {
             descriptionLabel.trailingAnchor.constraint(equalTo: dataLabel.trailingAnchor),
             descriptionLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -5)
         ])
+    }
+    
+    func descriptionConfigure(item: Int) {
+        descriptionLabel.text = Characteristics.getTitle(item).rawValue
     }
 }
