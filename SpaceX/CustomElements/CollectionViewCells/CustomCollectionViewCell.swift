@@ -61,6 +61,8 @@ class CustomCollectionViewCell: UICollectionViewCell {
         
         rocketInfoTableView.register(RocketCharacteristicTableViewCell.self, forCellReuseIdentifier: RocketCharacteristicTableViewCell.identifier)
         rocketInfoTableView.register(RocketInfoTableViewCell.self, forCellReuseIdentifier: RocketInfoTableViewCell.identifier)
+        rocketInfoTableView.register(FirstStepTableViewCell.self, forCellReuseIdentifier: FirstStepTableViewCell.identifier)
+        rocketInfoTableView.register(SecondStepTableViewCell.self, forCellReuseIdentifier: SecondStepTableViewCell.identifier)
     }
 }
 
@@ -81,6 +83,14 @@ extension CustomCollectionViewCell: UITableViewDelegate, UITableViewDataSource {
         
             return rocketInfoCell
             
+        case 2:
+            guard let firstStepCell = tableView.dequeueReusableCell(withIdentifier: FirstStepTableViewCell.identifier, for: indexPath) as? FirstStepTableViewCell else { return UITableViewCell() }
+            return firstStepCell
+            
+        case 3:
+            guard let secondStepCell = tableView.dequeueReusableCell(withIdentifier: SecondStepTableViewCell.identifier, for: indexPath) as? SecondStepTableViewCell else { return UITableViewCell() }
+            return secondStepCell
+            
         default:
             break
         }
@@ -93,26 +103,38 @@ extension CustomCollectionViewCell: UITableViewDelegate, UITableViewDataSource {
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 3
+        return 4
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        switch indexPath.row {
-        case 0:
-            return 200
-            
-        default:
-           return 150
-        }
+       return 150
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let headerView = UIView()
+        let headerView = UIView(frame: CGRect(x: 0, y: 0, width: 200, height: 100))
+        let headLabel = UILabel(frame: CGRect(x: 10, y: 0, width: headerView.frame.width , height: headerView.frame.height))
+        headLabel.textAlignment = .left
+        headLabel.textColor = .white
+        
+        switch section {
+        case 2:
+            headLabel.font = UIFont.systemFont(ofSize: 20)
+            headLabel.text = "Первая ступень"
+            
+        case 3:
+            headLabel.font = UIFont.systemFont(ofSize: 20)
+            headLabel.text = "Вторая ступень"
+            
+        default:
+            break
+        }
+        
+        headerView.addSubview(headLabel)
         headerView.backgroundColor = .clear
         return headerView
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 15
+        return 60
     }
 }

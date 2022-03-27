@@ -39,7 +39,7 @@ class MainViewController: UIViewController {
             pageControl.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             pageControl.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             pageControl.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            pageControl.heightAnchor.constraint(equalToConstant: 60)
+            pageControl.heightAnchor.constraint(equalToConstant: 50)
         ])
         
         NSLayoutConstraint.activate([
@@ -77,6 +77,6 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let count = scrollView.contentOffset.x / UIScreen.main.bounds.size.width
-        self.pageControl.currentPage = Int(count)
+        pageControl.currentPage = Int(count)
     }
 }

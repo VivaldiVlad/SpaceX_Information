@@ -12,10 +12,11 @@
 		66C782DF27EE1061008010E8 /* RocketLaunchesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C782DE27EE1061008010E8 /* RocketLaunchesViewController.swift */; };
 		66C782E127EE107F008010E8 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C782E027EE107F008010E8 /* SettingsViewController.swift */; };
 		66D7EC9227EF3207002EF4DF /* Сharacteristics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D7EC9127EF3207002EF4DF /* Сharacteristics.swift */; };
+		66D7EC9427F06EDB002EF4DF /* FirstStepTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D7EC9327F06EDB002EF4DF /* FirstStepTableViewCell.swift */; };
+		66D7EC9627F07A0E002EF4DF /* SecondStepTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D7EC9527F07A0E002EF4DF /* SecondStepTableViewCell.swift */; };
 		66E1F41D27EE1B13000741C1 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E1F41C27EE1B13000741C1 /* MainViewController.swift */; };
 		66E1F42227EEF51A000741C1 /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E1F42127EEF51A000741C1 /* CustomCollectionViewCell.swift */; };
 		66E1F42627EEFE6F000741C1 /* RocketCharacteristicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E1F42527EEFE6F000741C1 /* RocketCharacteristicTableViewCell.swift */; };
-		66E1F42827EF09D4000741C1 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E1F42727EF09D4000741C1 /* Extensions.swift */; };
 		86D42FC627EE0928004C2991 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D42FC527EE0928004C2991 /* AppDelegate.swift */; };
 		86D42FCA27EE0928004C2991 /* LoadDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D42FC927EE0928004C2991 /* LoadDataViewController.swift */; };
 		86D42FCF27EE0928004C2991 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86D42FCE27EE0928004C2991 /* Assets.xcassets */; };
@@ -28,10 +29,11 @@
 		66C782DE27EE1061008010E8 /* RocketLaunchesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketLaunchesViewController.swift; sourceTree = "<group>"; };
 		66C782E027EE107F008010E8 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		66D7EC9127EF3207002EF4DF /* Сharacteristics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Сharacteristics.swift"; sourceTree = "<group>"; };
+		66D7EC9327F06EDB002EF4DF /* FirstStepTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstStepTableViewCell.swift; sourceTree = "<group>"; };
+		66D7EC9527F07A0E002EF4DF /* SecondStepTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondStepTableViewCell.swift; sourceTree = "<group>"; };
 		66E1F41C27EE1B13000741C1 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		66E1F42127EEF51A000741C1 /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
 		66E1F42527EEFE6F000741C1 /* RocketCharacteristicTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RocketCharacteristicTableViewCell.swift; path = SpaceX/CustomElements/tableViewCell/RocketCharacteristicTableViewCell.swift; sourceTree = SOURCE_ROOT; };
-		66E1F42727EF09D4000741C1 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		86D42FC227EE0928004C2991 /* SpaceX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpaceX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86D42FC527EE0928004C2991 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		86D42FC927EE0928004C2991 /* LoadDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadDataViewController.swift; sourceTree = "<group>"; };
@@ -93,6 +95,8 @@
 			children = (
 				66E1F42527EEFE6F000741C1 /* RocketCharacteristicTableViewCell.swift */,
 				66BE8CDD27EF27C800EF540E /* RocketInfoTableViewCell.swift */,
+				66D7EC9327F06EDB002EF4DF /* FirstStepTableViewCell.swift */,
+				66D7EC9527F07A0E002EF4DF /* SecondStepTableViewCell.swift */,
 			);
 			path = TableViewCell;
 			sourceTree = "<group>";
@@ -123,7 +127,6 @@
 				86D42FCE27EE0928004C2991 /* Assets.xcassets */,
 				86D42FD027EE0928004C2991 /* LaunchScreen.storyboard */,
 				86D42FD327EE0928004C2991 /* Info.plist */,
-				66E1F42727EF09D4000741C1 /* Extensions.swift */,
 			);
 			path = SpaceX;
 			sourceTree = "<group>";
@@ -200,9 +203,10 @@
 				66E1F42627EEFE6F000741C1 /* RocketCharacteristicTableViewCell.swift in Sources */,
 				86D42FCA27EE0928004C2991 /* LoadDataViewController.swift in Sources */,
 				66E1F42227EEF51A000741C1 /* CustomCollectionViewCell.swift in Sources */,
+				66D7EC9627F07A0E002EF4DF /* SecondStepTableViewCell.swift in Sources */,
 				668A93E627EF105A001A0D47 /* RocketCharacteristicCollectionViewCell.swift in Sources */,
 				66D7EC9227EF3207002EF4DF /* Сharacteristics.swift in Sources */,
-				66E1F42827EF09D4000741C1 /* Extensions.swift in Sources */,
+				66D7EC9427F06EDB002EF4DF /* FirstStepTableViewCell.swift in Sources */,
 				86D42FC627EE0928004C2991 /* AppDelegate.swift in Sources */,
 				66C782E127EE107F008010E8 /* SettingsViewController.swift in Sources */,
 				66C782DF27EE1061008010E8 /* RocketLaunchesViewController.swift in Sources */,

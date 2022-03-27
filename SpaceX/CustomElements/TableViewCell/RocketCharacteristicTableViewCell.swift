@@ -64,24 +64,24 @@ class RocketCharacteristicTableViewCell: UITableViewCell {
     
     private func constraintsSetup() {
         NSLayoutConstraint.activate([
-            rocketNameLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10),
+            rocketNameLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 0),
             rocketNameLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10),
-            rocketNameLabel.heightAnchor.constraint(equalTo: contentView.heightAnchor, multiplier: 1 / 3),
+            rocketNameLabel.heightAnchor.constraint(equalTo: contentView.heightAnchor, multiplier: 1 / 4),
             rocketNameLabel.widthAnchor.constraint(equalTo: contentView.widthAnchor, multiplier: 1 / 2)
         ])
         
         NSLayoutConstraint.activate([
-            presentSettingsButton.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10),
+            presentSettingsButton.topAnchor.constraint(equalTo: rocketNameLabel.topAnchor),
             presentSettingsButton.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -10),
-            presentSettingsButton.heightAnchor.constraint(equalTo: contentView.heightAnchor, multiplier: 1 / 3),
+            presentSettingsButton.heightAnchor.constraint(equalTo: contentView.heightAnchor, multiplier: 1 / 4),
             presentSettingsButton.widthAnchor.constraint(equalToConstant: 50)
         ])
         
         NSLayoutConstraint.activate([
-            characteristicCollectionView.topAnchor.constraint(equalTo: rocketNameLabel.bottomAnchor, constant: 30),
+            characteristicCollectionView.topAnchor.constraint(equalTo: rocketNameLabel.bottomAnchor, constant: 20),
             characteristicCollectionView.leadingAnchor.constraint(equalTo: rocketNameLabel.leadingAnchor, constant: 10),
             characteristicCollectionView.trailingAnchor.constraint(equalTo: presentSettingsButton.trailingAnchor, constant: -10),
-            characteristicCollectionView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -10)
+            characteristicCollectionView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
         ])
     }
 }
