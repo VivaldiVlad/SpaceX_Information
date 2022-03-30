@@ -84,6 +84,8 @@ class RocketCharacteristicTableViewCell: UITableViewCell {
             characteristicCollectionView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
         ])
     }
+    
+    
 }
 
 extension RocketCharacteristicTableViewCell: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {

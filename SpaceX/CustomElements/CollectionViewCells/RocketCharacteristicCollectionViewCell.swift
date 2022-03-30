@@ -4,6 +4,8 @@ class RocketCharacteristicCollectionViewCell: UICollectionViewCell {
     //MARK: - properties
     static let identifier = "RocketCharacteristicCollectionViewCell"
     
+    private var rocketData: RocketData?
+    
     private let dataLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false

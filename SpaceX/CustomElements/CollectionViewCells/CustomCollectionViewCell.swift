@@ -7,7 +7,7 @@ class CustomCollectionViewCell: UICollectionViewCell {
     private let rocketImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.backgroundColor = .red
+        imageView.image = UIImage(named: "mainRocket")
         return imageView
     }()
     
