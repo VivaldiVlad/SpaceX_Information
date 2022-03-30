@@ -1,8 +1,7 @@
-//
-//  RocketSecondStage.swift
-//  SpaceX
-//
-//  Created by Сабитов Данил on 30.03.2022.
-//
-
 import Foundation
+
+struct RocketSecondStageInfo: Decodable {
+    let engines: Int
+    let fuel_amount_tons: Float
+    let burn_time_sec: Int?
+}

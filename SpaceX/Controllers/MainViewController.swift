@@ -26,6 +26,10 @@ class MainViewController: UIViewController {
         addSubview()
         constraintsSetup()
         collectionViewSetup()
+        
+        RocketsNetworkManager.shared.fetchRequestForRocketsData { rocket in
+            print(rocket)
+        }
     }
     
     //MARK: - methods

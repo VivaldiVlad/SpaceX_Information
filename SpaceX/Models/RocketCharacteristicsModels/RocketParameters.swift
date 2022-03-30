@@ -1,6 +1,6 @@
 import Foundation
 
-struct RocketHeight: Decodable {
+struct RocketParameters: Decodable {
     let meters: Double
     let feet: Double
 }
