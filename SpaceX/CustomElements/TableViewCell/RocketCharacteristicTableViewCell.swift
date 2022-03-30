@@ -1,8 +1,14 @@
 import UIKit
 
+protocol RocketCharacteristicTableViewCellDelegate: AnyObject {
+    func presentSettingViewController()
+}
+
 class RocketCharacteristicTableViewCell: UITableViewCell {
     //MARK: - properties
     static let identifier = "RocketCharacteristicTableViewCell"
+    
+    weak var delegate: RocketCharacteristicTableViewCellDelegate?
     
     private let characteristicCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -30,6 +36,7 @@ class RocketCharacteristicTableViewCell: UITableViewCell {
         button.tintColor = .white
         let configuration = UIImage.SymbolConfiguration(pointSize: 20, weight: .bold, scale: .large)
         button.setImage(UIImage(systemName: "gearshape", withConfiguration: configuration), for: .normal)
+        button.addTarget(self, action: #selector(sendDelegate), for: .touchUpInside)
         button.alpha = 0.7
         return button
     }()
@@ -85,7 +92,9 @@ class RocketCharacteristicTableViewCell: UITableViewCell {
         ])
     }
     
-    
+    @objc private func sendDelegate() {
+        delegate?.presentSettingViewController()
+    }
 }
 
 extension RocketCharacteristicTableViewCell: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
@@ -95,7 +104,7 @@ extension RocketCharacteristicTableViewCell: UICollectionViewDelegate, UICollect
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let characteristicCell = collectionView.dequeueReusableCell(withReuseIdentifier: RocketCharacteristicCollectionViewCell.identifier, for: indexPath) as? RocketCharacteristicCollectionViewCell else { return UICollectionViewCell() }
-        characteristicCell.descriptionConfigure(item: indexPath.item)
+        characteristicCell.configureParametersAndDescription(item: indexPath.item)
         return characteristicCell
     }
     

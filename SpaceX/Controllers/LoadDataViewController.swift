@@ -35,12 +35,21 @@ class LoadDataViewController: UIViewController {
         RocketsNetworkManager.shared.fetchRequestForRocketCharacteristicData { [weak self] rocket in
             guard let self = self else { return }
             self.rocketData = rocket
+        }
+        
+        RocketsNetworkManager.shared.fetchRequestForRocketsLaunchData { [weak self] rocketLaunchData in
+            guard let self = self else { return }
+            self.rocketLaunchesData = rocketLaunchData
+        }
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            guard let rocketData = self.rocketData,
+                  let rocketLaunchData = self.rocketLaunchesData else { return }
+
+            let mainViewController = MainViewController(rocketData: rocketData, rocketLaunchData: rocketLaunchData)
+            mainViewController.modalPresentationStyle = .fullScreen
             
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                let mainVC = MainViewController(rocketData: self.rocketData ?? rocket)
-                mainVC.modalPresentationStyle = .fullScreen
-                self.present(mainVC, animated: true, completion: nil)
-            }
+            self.present(mainViewController, animated: true, completion: nil)
         }
     }
     

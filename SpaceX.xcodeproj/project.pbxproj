@@ -11,6 +11,7 @@
 		661097BF27F1AE47007F41A6 /* RocketData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661097BE27F1AE47007F41A6 /* RocketData.swift */; };
 		6628E2F627F4904900F46235 /* RocketLaunchData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6628E2F527F4904900F46235 /* RocketLaunchData.swift */; };
 		6628E2F927F4953000F46235 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6628E2F827F4953000F46235 /* Date.swift */; };
+		6628E2FB27F4983C00F46235 /* RocketSuccessLaunchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6628E2FA27F4983C00F46235 /* RocketSuccessLaunchTableViewCell.swift */; };
 		668A93E627EF105A001A0D47 /* RocketCharacteristicCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668A93E527EF105A001A0D47 /* RocketCharacteristicCollectionViewCell.swift */; };
 		66BE8CDE27EF27C800EF540E /* RocketInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BE8CDD27EF27C800EF540E /* RocketInfoTableViewCell.swift */; };
 		66C62EE227F08FBE001234A2 /* RocketsNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C62EE127F08FBE001234A2 /* RocketsNetworkManager.swift */; };
@@ -36,6 +37,7 @@
 		661097BE27F1AE47007F41A6 /* RocketData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketData.swift; sourceTree = "<group>"; };
 		6628E2F527F4904900F46235 /* RocketLaunchData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketLaunchData.swift; sourceTree = "<group>"; };
 		6628E2F827F4953000F46235 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		6628E2FA27F4983C00F46235 /* RocketSuccessLaunchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketSuccessLaunchTableViewCell.swift; sourceTree = "<group>"; };
 		668A93E527EF105A001A0D47 /* RocketCharacteristicCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketCharacteristicCollectionViewCell.swift; sourceTree = "<group>"; };
 		66BE8CDD27EF27C800EF540E /* RocketInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketInfoTableViewCell.swift; sourceTree = "<group>"; };
 		66C62EE127F08FBE001234A2 /* RocketsNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketsNetworkManager.swift; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 				66BE8CDD27EF27C800EF540E /* RocketInfoTableViewCell.swift */,
 				66D7EC9327F06EDB002EF4DF /* FirstStepTableViewCell.swift */,
 				66D7EC9527F07A0E002EF4DF /* SecondStepTableViewCell.swift */,
+				6628E2FA27F4983C00F46235 /* RocketSuccessLaunchTableViewCell.swift */,
 			);
 			path = TableViewCell;
 			sourceTree = "<group>";
@@ -279,6 +282,7 @@
 				66C62EE227F08FBE001234A2 /* RocketsNetworkManager.swift in Sources */,
 				66D7EC9427F06EDB002EF4DF /* FirstStepTableViewCell.swift in Sources */,
 				86D42FC627EE0928004C2991 /* AppDelegate.swift in Sources */,
+				6628E2FB27F4983C00F46235 /* RocketSuccessLaunchTableViewCell.swift in Sources */,
 				66C782E127EE107F008010E8 /* SettingsViewController.swift in Sources */,
 				66E3E69F27F4536D00163123 /* RocketSecondStage.swift in Sources */,
 				66C782DF27EE1061008010E8 /* RocketLaunchesViewController.swift in Sources */,

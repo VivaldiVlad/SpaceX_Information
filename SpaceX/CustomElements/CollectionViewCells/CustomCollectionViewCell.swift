@@ -4,6 +4,8 @@ class CustomCollectionViewCell: UICollectionViewCell {
     //MARK: - properties
     static let identifier = "CustomCollectionViewCell"
     
+    weak var delegate: RocketCharacteristicTableViewCellDelegate?
+    
     private let rocketImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -76,6 +78,8 @@ extension CustomCollectionViewCell: UITableViewDelegate, UITableViewDataSource {
         case 0:
             guard let rocketCharacteristicCell = tableView.dequeueReusableCell(withIdentifier: RocketCharacteristicTableViewCell.identifier, for: indexPath) as? RocketCharacteristicTableViewCell else { return UITableViewCell() }
             
+            rocketCharacteristicCell.delegate = delegate
+            
             return rocketCharacteristicCell
             
         case 1:
@@ -136,5 +140,11 @@ extension CustomCollectionViewCell: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 60
+    }
+}
+
+extension CustomCollectionViewCell: RocketCharacteristicTableViewCellDelegate {
+    func presentSettingViewController() {
+        
     }
 }

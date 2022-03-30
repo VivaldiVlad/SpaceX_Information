@@ -2,6 +2,7 @@ import UIKit
 
 class MainViewController: UIViewController {
     private var rocketData: [RocketData]?
+    private var rocketLaunchData: [RocketLaunchData]?
     
     //MARK: - properties
     private let collectionView: UICollectionView = {
@@ -22,8 +23,9 @@ class MainViewController: UIViewController {
         return page
     }()
     
-    init(rocketData: [RocketData]) {
+    init(rocketData: [RocketData], rocketLaunchData: [RocketLaunchData]) {
         self.rocketData = rocketData
+        self.rocketLaunchData = rocketLaunchData
         
         super.init(nibName: nil, bundle: nil)
     }
@@ -77,6 +79,7 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CustomCollectionViewCell.identifier, for: indexPath) as? CustomCollectionViewCell else { return UICollectionViewCell() }
+        cell.delegate = self
         return cell
     }
     
@@ -90,5 +93,14 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let count = scrollView.contentOffset.x / UIScreen.main.bounds.size.width
         pageControl.currentPage = Int(count)
+    }
+}
+
+extension MainViewController: RocketCharacteristicTableViewCellDelegate {
+    func presentSettingViewController() {
+        let settingsViewController = SettingsViewController(rocketLaunchData: rocketLaunchData)
+        settingsViewController.modalPresentationStyle = .fullScreen
+        
+        present(settingsViewController, animated: true, completion: nil)
     }
 }
