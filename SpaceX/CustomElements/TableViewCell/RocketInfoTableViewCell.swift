@@ -128,9 +128,9 @@ class RocketInfoTableViewCell: UITableViewCell {
     }
     
     func rocketInfoConfigure(with rocketData: RocketData) {
-        let firstFlightDate = Date.changeStringDateFormat(flightDate: rocketData.first_flight)
+        let firstFlightDate = Date.changeStringDateFormat(flightDate: rocketData.firstFlight)
         firstFlightDateLabel.text = firstFlightDate
-        launchCostLabel.text = "\(rocketData.cost_per_launch) $"
+        launchCostLabel.text = "\(rocketData.costPerLaunch) $"
         rocketCountryLabel.text = rocketData.country
     }
 }

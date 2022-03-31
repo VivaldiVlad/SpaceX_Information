@@ -102,7 +102,7 @@ extension CustomCollectionViewCell: UITableViewDelegate, UITableViewDataSource {
         case 2:
             guard let firstStageCell = tableView.dequeueReusableCell(withIdentifier: FirstStagTableViewCell.identifier, for: indexPath) as? FirstStagTableViewCell else { return UITableViewCell() }
             
-            guard let rocketStagesInfo = rocketData?.first_stage else { return UITableViewCell() }
+            guard let rocketStagesInfo = rocketData?.firstStage else { return UITableViewCell() }
             
             firstStageCell.firstStageConfigure(with: rocketStagesInfo)
             
@@ -111,7 +111,7 @@ extension CustomCollectionViewCell: UITableViewDelegate, UITableViewDataSource {
         case 3:
             guard let secondStageCell = tableView.dequeueReusableCell(withIdentifier: SecondStageTableViewCell.identifier, for: indexPath) as? SecondStageTableViewCell else { return UITableViewCell() }
             
-            guard let rocketStagesInfo = rocketData?.second_stage else { return UITableViewCell() }
+            guard let rocketStagesInfo = rocketData?.secondStage else { return UITableViewCell() }
             
             secondStageCell.secondStageConfigure(with: rocketStagesInfo)
             

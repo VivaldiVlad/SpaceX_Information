@@ -129,10 +129,10 @@ class FirstStagTableViewCell: UITableViewCell {
     }
     
     func firstStageConfigure(with stagesData: RocketStagesInfo) {
-        guard let gasBurningTimeInSec = stagesData.burn_time_sec else { return }
+        guard let gasBurningTimeInSec = stagesData.burnTimeSec else { return }
         
         enginesAmountLabel.text = "\(stagesData.engines)"
-        gasAmountLabel.text = "\(stagesData.fuel_amount_tons) ton"
+        gasAmountLabel.text = "\(stagesData.fuelAmountTons) ton"
         gasBurningLabel.text = "\(gasBurningTimeInSec)"
     }
 }
