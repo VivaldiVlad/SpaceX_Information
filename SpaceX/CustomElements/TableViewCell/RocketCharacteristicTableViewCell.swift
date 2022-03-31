@@ -24,12 +24,7 @@ class RocketCharacteristicTableViewCell: UITableViewCell {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .white
-<<<<<<< HEAD
-        label.text = "Falcon Heavy"
-        label.textAlignment = .center
-=======
         label.textAlignment = .left
->>>>>>> feature/logic
         label.font = UIFont.systemFont(ofSize: 25)
         return label
     }()
@@ -75,11 +70,8 @@ class RocketCharacteristicTableViewCell: UITableViewCell {
     
     private func constraintsSetup() {
         NSLayoutConstraint.activate([
-<<<<<<< HEAD
-            rocketNameLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 0),
-=======
+            
             rocketNameLabel.topAnchor.constraint(equalTo: contentView.topAnchor),
->>>>>>> feature/logic
             rocketNameLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10),
             rocketNameLabel.heightAnchor.constraint(equalTo: contentView.heightAnchor, multiplier: 1 / 4),
             rocketNameLabel.widthAnchor.constraint(equalTo: contentView.widthAnchor, multiplier: 1 / 2)
@@ -94,11 +86,8 @@ class RocketCharacteristicTableViewCell: UITableViewCell {
         
         NSLayoutConstraint.activate([
             characteristicCollectionView.topAnchor.constraint(equalTo: rocketNameLabel.bottomAnchor, constant: 20),
-<<<<<<< HEAD
             characteristicCollectionView.leadingAnchor.constraint(equalTo: rocketNameLabel.leadingAnchor, constant: 10),
-=======
             characteristicCollectionView.leadingAnchor.constraint(equalTo: rocketNameLabel.leadingAnchor),
->>>>>>> feature/logic
             characteristicCollectionView.trailingAnchor.constraint(equalTo: presentSettingsButton.trailingAnchor, constant: -10),
             characteristicCollectionView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
         ])
@@ -107,13 +96,10 @@ class RocketCharacteristicTableViewCell: UITableViewCell {
     @objc private func sendDelegate() {
         delegate?.presentSettingViewController()
     }
-<<<<<<< HEAD
-=======
     
     func rocketNameConfigure(from rocketName: RocketData) {
         rocketNameLabel.text = rocketName.name
     }
->>>>>>> feature/logic
 }
 
 extension RocketCharacteristicTableViewCell: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
@@ -129,7 +115,7 @@ extension RocketCharacteristicTableViewCell: UICollectionViewDelegate, UICollect
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = (characteristicCollectionView.frame.width / 3) - 5
-        let height = characteristicCollectionView.frame.height 
+        let height = characteristicCollectionView.frame.height
         
         return CGSize(width: width, height: height)
     }
