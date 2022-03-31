@@ -63,6 +63,11 @@ class MainViewController: UIViewController {
             collectionView.bottomAnchor.constraint(equalTo: pageControl.topAnchor)
         ])
     }
+<<<<<<< HEAD
+=======
+<<<<<<< Updated upstream
+=======
+>>>>>>> feature/logic
     
     private func collectionViewSetup() {
         collectionView.dataSource = self
@@ -79,6 +84,12 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CustomCollectionViewCell.identifier, for: indexPath) as? CustomCollectionViewCell else { return UICollectionViewCell() }
+<<<<<<< HEAD
+=======
+        
+        guard let rocketData = rocketData?[indexPath.item] else { return UICollectionViewCell() }
+        cell.rocketDataInit(with: rocketData)
+>>>>>>> feature/logic
         cell.delegate = self
         return cell
     }
@@ -103,4 +114,8 @@ extension MainViewController: RocketCharacteristicTableViewCellDelegate {
         
         present(settingsViewController, animated: true, completion: nil)
     }
+<<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
+>>>>>>> feature/logic
 }

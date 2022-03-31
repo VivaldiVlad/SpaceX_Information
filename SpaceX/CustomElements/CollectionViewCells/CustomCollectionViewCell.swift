@@ -3,6 +3,10 @@ import UIKit
 class CustomCollectionViewCell: UICollectionViewCell {
     //MARK: - properties
     static let identifier = "CustomCollectionViewCell"
+<<<<<<< HEAD
+=======
+    private var rocketData: RocketData?
+>>>>>>> feature/logic
     
     weak var delegate: RocketCharacteristicTableViewCellDelegate?
     
@@ -66,6 +70,13 @@ class CustomCollectionViewCell: UICollectionViewCell {
         rocketInfoTableView.register(FirstStepTableViewCell.self, forCellReuseIdentifier: FirstStepTableViewCell.identifier)
         rocketInfoTableView.register(SecondStepTableViewCell.self, forCellReuseIdentifier: SecondStepTableViewCell.identifier)
     }
+<<<<<<< HEAD
+=======
+    
+    func rocketDataInit(with rocketData: RocketData) {
+        self.rocketData = rocketData
+    }
+>>>>>>> feature/logic
 }
 
 extension CustomCollectionViewCell: UITableViewDelegate, UITableViewDataSource {
@@ -78,7 +89,14 @@ extension CustomCollectionViewCell: UITableViewDelegate, UITableViewDataSource {
         case 0:
             guard let rocketCharacteristicCell = tableView.dequeueReusableCell(withIdentifier: RocketCharacteristicTableViewCell.identifier, for: indexPath) as? RocketCharacteristicTableViewCell else { return UITableViewCell() }
             
+<<<<<<< HEAD
             rocketCharacteristicCell.delegate = delegate
+=======
+            guard let rocketData = rocketData else { return UITableViewCell() }
+            
+            rocketCharacteristicCell.delegate = delegate
+            rocketCharacteristicCell.rocketNameConfigure(from: rocketData)
+>>>>>>> feature/logic
             
             return rocketCharacteristicCell
             
