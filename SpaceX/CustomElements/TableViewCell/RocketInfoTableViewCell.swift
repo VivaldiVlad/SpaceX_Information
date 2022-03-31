@@ -4,7 +4,7 @@ class RocketInfoTableViewCell: UITableViewCell {
     //MARK: - properties
     static let identifier = "RocketInfoTableViewCell"
     
-    private let firstStartDescriptionLabel: UILabel = {
+    private let firstFlightDescriptionLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = .left
@@ -14,7 +14,7 @@ class RocketInfoTableViewCell: UITableViewCell {
         return label
     }()
     
-    private let firstStartDateLabel: UILabel = {
+    private let firstFlightDateLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = .right
@@ -75,8 +75,8 @@ class RocketInfoTableViewCell: UITableViewCell {
     
     //MARK: - methods
     private func addSubview() {
-        contentView.addSubview(firstStartDescriptionLabel)
-        contentView.addSubview(firstStartDateLabel)
+        contentView.addSubview(firstFlightDescriptionLabel)
+        contentView.addSubview(firstFlightDateLabel)
         contentView.addSubview(rocketCountryDescriptionLabel)
         contentView.addSubview(rocketCountryLabel)
         contentView.addSubview(launchCostDescriptionLabel)
@@ -85,29 +85,29 @@ class RocketInfoTableViewCell: UITableViewCell {
     
     private func constraintsSetup() {
         NSLayoutConstraint.activate([
-            firstStartDescriptionLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10),
-            firstStartDescriptionLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10),
-            firstStartDescriptionLabel.widthAnchor.constraint(equalTo: contentView.widthAnchor, multiplier: 1 / 2),
-            firstStartDescriptionLabel.heightAnchor.constraint(equalTo: contentView.heightAnchor, multiplier: 1 / 3)
+            firstFlightDescriptionLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10),
+            firstFlightDescriptionLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10),
+            firstFlightDescriptionLabel.widthAnchor.constraint(equalTo: contentView.widthAnchor, multiplier: 1 / 2),
+            firstFlightDescriptionLabel.heightAnchor.constraint(equalTo: contentView.heightAnchor, multiplier: 1 / 3)
         ])
         
         NSLayoutConstraint.activate([
-            firstStartDateLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10),
-            firstStartDateLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -10),
-            firstStartDateLabel.widthAnchor.constraint(equalTo: contentView.widthAnchor, multiplier: 1 / 2),
-            firstStartDateLabel.heightAnchor.constraint(equalTo: contentView.heightAnchor, multiplier: 1 / 3)
+            firstFlightDateLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10),
+            firstFlightDateLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -10),
+            firstFlightDateLabel.widthAnchor.constraint(equalTo: contentView.widthAnchor, multiplier: 1 / 2),
+            firstFlightDateLabel.heightAnchor.constraint(equalTo: contentView.heightAnchor, multiplier: 1 / 3)
         ])
         
         NSLayoutConstraint.activate([
-            rocketCountryDescriptionLabel.topAnchor.constraint(equalTo: firstStartDescriptionLabel.bottomAnchor, constant: 5),
-            rocketCountryDescriptionLabel.leadingAnchor.constraint(equalTo: firstStartDescriptionLabel.leadingAnchor),
+            rocketCountryDescriptionLabel.topAnchor.constraint(equalTo: firstFlightDescriptionLabel.bottomAnchor, constant: 5),
+            rocketCountryDescriptionLabel.leadingAnchor.constraint(equalTo: firstFlightDescriptionLabel.leadingAnchor),
             rocketCountryDescriptionLabel.widthAnchor.constraint(equalTo: contentView.widthAnchor, multiplier: 1 / 2),
             rocketCountryDescriptionLabel.heightAnchor.constraint(equalTo: contentView.heightAnchor, multiplier: 1 / 3)
         ])
         
         NSLayoutConstraint.activate([
-            rocketCountryLabel.topAnchor.constraint(equalTo: firstStartDateLabel.bottomAnchor, constant: 5),
-            rocketCountryLabel.trailingAnchor.constraint(equalTo: firstStartDateLabel.trailingAnchor),
+            rocketCountryLabel.topAnchor.constraint(equalTo: firstFlightDateLabel.bottomAnchor, constant: 5),
+            rocketCountryLabel.trailingAnchor.constraint(equalTo: firstFlightDateLabel.trailingAnchor),
             rocketCountryLabel.widthAnchor.constraint(equalTo: contentView.widthAnchor, multiplier: 1 / 2),
             rocketCountryLabel.heightAnchor.constraint(equalTo: contentView.heightAnchor, multiplier: 1 / 3)
         ])
@@ -125,6 +125,12 @@ class RocketInfoTableViewCell: UITableViewCell {
             launchCostLabel.widthAnchor.constraint(equalTo: contentView.widthAnchor, multiplier: 1 / 2),
             launchCostLabel.heightAnchor.constraint(equalTo: contentView.heightAnchor, multiplier: 1 / 3)
         ])
-        
+    }
+    
+    func rocketInfoConfigure(with rocketData: RocketData) {
+        let firstFlightDate = Date.changeStringDateFormat(flightDate: rocketData.first_flight)
+        firstFlightDateLabel.text = firstFlightDate
+        launchCostLabel.text = "\(rocketData.cost_per_launch) $"
+        rocketCountryLabel.text = rocketData.country
     }
 }

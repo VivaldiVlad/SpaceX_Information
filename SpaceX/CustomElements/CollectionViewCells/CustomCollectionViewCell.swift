@@ -64,8 +64,8 @@ class CustomCollectionViewCell: UICollectionViewCell {
         
         rocketInfoTableView.register(RocketCharacteristicTableViewCell.self, forCellReuseIdentifier: RocketCharacteristicTableViewCell.identifier)
         rocketInfoTableView.register(RocketInfoTableViewCell.self, forCellReuseIdentifier: RocketInfoTableViewCell.identifier)
-        rocketInfoTableView.register(FirstStepTableViewCell.self, forCellReuseIdentifier: FirstStepTableViewCell.identifier)
-        rocketInfoTableView.register(SecondStepTableViewCell.self, forCellReuseIdentifier: SecondStepTableViewCell.identifier)
+        rocketInfoTableView.register(FirstStagTableViewCell.self, forCellReuseIdentifier: FirstStagTableViewCell.identifier)
+        rocketInfoTableView.register(SecondStageTableViewCell.self, forCellReuseIdentifier: SecondStageTableViewCell.identifier)
     }
     
     func rocketDataInit(with rocketData: RocketData) {
@@ -92,16 +92,30 @@ extension CustomCollectionViewCell: UITableViewDelegate, UITableViewDataSource {
             
         case 1:
             guard let rocketInfoCell = tableView.dequeueReusableCell(withIdentifier: RocketInfoTableViewCell.identifier, for: indexPath) as? RocketInfoTableViewCell else { return UITableViewCell() }
+            
+            guard let rocketData = rocketData else { return UITableViewCell() }
+            
+            rocketInfoCell.rocketInfoConfigure(with: rocketData)
         
             return rocketInfoCell
             
         case 2:
-            guard let firstStepCell = tableView.dequeueReusableCell(withIdentifier: FirstStepTableViewCell.identifier, for: indexPath) as? FirstStepTableViewCell else { return UITableViewCell() }
-            return firstStepCell
+            guard let firstStageCell = tableView.dequeueReusableCell(withIdentifier: FirstStagTableViewCell.identifier, for: indexPath) as? FirstStagTableViewCell else { return UITableViewCell() }
+            
+            guard let rocketStagesInfo = rocketData?.first_stage else { return UITableViewCell() }
+            
+            firstStageCell.firstStageConfigure(with: rocketStagesInfo)
+            
+            return firstStageCell
             
         case 3:
-            guard let secondStepCell = tableView.dequeueReusableCell(withIdentifier: SecondStepTableViewCell.identifier, for: indexPath) as? SecondStepTableViewCell else { return UITableViewCell() }
-            return secondStepCell
+            guard let secondStageCell = tableView.dequeueReusableCell(withIdentifier: SecondStageTableViewCell.identifier, for: indexPath) as? SecondStageTableViewCell else { return UITableViewCell() }
+            
+            guard let rocketStagesInfo = rocketData?.second_stage else { return UITableViewCell() }
+            
+            secondStageCell.secondStageConfigure(with: rocketStagesInfo)
+            
+            return secondStageCell
             
         default:
             break
@@ -148,11 +162,5 @@ extension CustomCollectionViewCell: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 60
-    }
-}
-
-extension CustomCollectionViewCell: RocketCharacteristicTableViewCellDelegate {
-    func presentSettingViewController() {
-        
     }
 }

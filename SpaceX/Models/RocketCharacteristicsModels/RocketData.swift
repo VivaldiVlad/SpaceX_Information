@@ -8,6 +8,6 @@ struct RocketData: Decodable {
     let height: RocketParameters
     let diameter: RocketParameters
     let mass: RocketMass
-    let first_stage: RocketFirstStageInfo
-    let second_stage: RocketSecondStageInfo
+    let first_stage: RocketStagesInfo
+    let second_stage: RocketStagesInfo
 }

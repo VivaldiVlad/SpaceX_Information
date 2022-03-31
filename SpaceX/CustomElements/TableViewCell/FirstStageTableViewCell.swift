@@ -1,9 +1,8 @@
-
 import UIKit
 
-class SecondStepTableViewCell: UITableViewCell {
+class FirstStagTableViewCell: UITableViewCell {
     //MARK: - properties
-    static let identifier = "SecondStepTableViewCell"
+    static let identifier = "FirstStagTableViewCell"
     
     private let enginesAmountDescriptionLabel: UILabel = {
         let label = UILabel()
@@ -127,5 +126,13 @@ class SecondStepTableViewCell: UITableViewCell {
             gasBurningLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -10),
             gasBurningLabel.heightAnchor.constraint(equalTo: contentView.heightAnchor, multiplier: 1 / 3)
         ])
+    }
+    
+    func firstStageConfigure(with stagesData: RocketStagesInfo) {
+        guard let gasBurningTimeInSec = stagesData.burn_time_sec else { return }
+        
+        enginesAmountLabel.text = "\(stagesData.engines)"
+        gasAmountLabel.text = "\(stagesData.fuel_amount_tons) ton"
+        gasBurningLabel.text = "\(gasBurningTimeInSec)"
     }
 }

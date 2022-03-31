@@ -11,6 +11,16 @@ class SettingsViewController: UIViewController {
         return tableView
     }()
     
+    private let dismissButton: UIButton = {
+        let button = UIButton()
+        let configuration = UIImage.SymbolConfiguration(pointSize: 20, weight: .bold, scale: .large)
+        button.setImage(UIImage(systemName: "x.circle", withConfiguration: configuration), for: .normal)
+        button.addTarget(self, action: #selector(dismissButtonTapped), for: .touchUpInside)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.tintColor = .red
+        return button
+    }()
+    
     init(rocketLaunchData: [RocketLaunchData]?) {
         self.rocketLaunchData = rocketLaunchData
         
@@ -24,15 +34,16 @@ class SettingsViewController: UIViewController {
     //MARK: - lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .black
         addSubview()
         constraintsSetup()
-        view.backgroundColor = .black
         tableViewSetup()
     }
     
     //MARK: - methods
     private func addSubview() {
         view.addSubview(launchSuccessTableView)
+        view.addSubview(dismissButton)
     }
     
     private func tableViewSetup() {
@@ -44,11 +55,22 @@ class SettingsViewController: UIViewController {
     
     private func constraintsSetup() {
         NSLayoutConstraint.activate([
-            launchSuccessTableView.topAnchor.constraint(equalTo: view.topAnchor),
+            launchSuccessTableView.topAnchor.constraint(equalTo: view.topAnchor, constant: 100),
             launchSuccessTableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             launchSuccessTableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             launchSuccessTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
+        
+        NSLayoutConstraint.activate([
+            dismissButton.topAnchor.constraint(equalTo: view.topAnchor, constant: 10),
+            dismissButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
+            dismissButton.bottomAnchor.constraint(equalTo: launchSuccessTableView.topAnchor, constant: -10),
+            dismissButton.widthAnchor.constraint(equalToConstant: 50)
+        ])
+    }
+    
+    @objc private func dismissButtonTapped() {
+        dismiss(animated: true)
     }
 }
 
