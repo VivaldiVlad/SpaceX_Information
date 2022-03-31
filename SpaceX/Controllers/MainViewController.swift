@@ -10,11 +10,11 @@ class MainViewController: UIViewController {
         return scrollView
     }()
     
-    private let pageControl: UIPageControl = {
+    private lazy var pageControl: UIPageControl = {
         let page = UIPageControl()
         page.translatesAutoresizingMaskIntoConstraints = false
         page.backgroundColor = .black
-        page.numberOfPages = 3
+        page.numberOfPages = rocketData?.count ?? 0
         return page
     }()
     
@@ -60,7 +60,7 @@ class MainViewController: UIViewController {
 
 extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return pageControl.numberOfPages
+        return rocketData?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
