@@ -70,7 +70,10 @@ class RocketCharacteristicTableViewCell: UITableViewCell {
     
     private func constraintsSetup() {
         NSLayoutConstraint.activate([
+<<<<<<< Updated upstream
             
+=======
+>>>>>>> Stashed changes
             rocketNameLabel.topAnchor.constraint(equalTo: contentView.topAnchor),
             rocketNameLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10),
             rocketNameLabel.heightAnchor.constraint(equalTo: contentView.heightAnchor, multiplier: 1 / 4),
@@ -86,7 +89,10 @@ class RocketCharacteristicTableViewCell: UITableViewCell {
         
         NSLayoutConstraint.activate([
             characteristicCollectionView.topAnchor.constraint(equalTo: rocketNameLabel.bottomAnchor, constant: 20),
+<<<<<<< Updated upstream
             characteristicCollectionView.leadingAnchor.constraint(equalTo: rocketNameLabel.leadingAnchor, constant: 10),
+=======
+>>>>>>> Stashed changes
             characteristicCollectionView.leadingAnchor.constraint(equalTo: rocketNameLabel.leadingAnchor),
             characteristicCollectionView.trailingAnchor.constraint(equalTo: presentSettingsButton.trailingAnchor, constant: -10),
             characteristicCollectionView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)

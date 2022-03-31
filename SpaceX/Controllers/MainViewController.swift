@@ -81,7 +81,10 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CustomCollectionViewCell.identifier, for: indexPath) as? CustomCollectionViewCell else { return UICollectionViewCell() }
         
         guard let rocketData = rocketData?[indexPath.item] else { return UICollectionViewCell() }
+<<<<<<< Updated upstream
         
+=======
+>>>>>>> Stashed changes
         cell.rocketDataInit(with: rocketData)
         cell.delegate = self
         return cell
