@@ -2,8 +2,7 @@ import UIKit
 
 class SettingsViewController: UIViewController {
     //MARK: - properties
-<<<<<<< Updated upstream
-=======
+
     private var rocketLaunchData: [RocketLaunchData]?
     
     private let launchSuccessTableView: UITableView = {
@@ -39,10 +38,13 @@ class SettingsViewController: UIViewController {
         super.viewDidLoad()
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     }
     
     //MARK: - methods
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
         view.backgroundColor = .black
