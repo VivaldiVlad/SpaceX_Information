@@ -2,27 +2,15 @@ import UIKit
 
 class SettingsViewController: UIViewController {
     //MARK: - properties
-    private let titleLabel: UILabel = {
-        let titleLabel = UILabel(frame: CGRect(origin: .zero, size: CGSize(width: 80, height: 22)))
-        titleLabel.text = "Настройки"
-        titleLabel.textColor = .white
-        
-        return titleLabel
+    private let rocketLaunchData: [RocketLaunchData]?
+    
+    private let launchSuccessTableView: UITableView = {
+        let tableView = UITableView(frame: .zero, style: .insetGrouped)
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.backgroundColor = .clear
+        return tableView
     }()
     
-    private let backButton: UIButton = {
-        let button = UIButton(frame: CGRect(origin: .zero, size: CGSize(width: 67, height: 22)))
-        button.setTitle("Назад", for: .normal)
-        button.setTitleColor(.white, for: .normal)
-        return button
-    }()
-    
-<<<<<<< Updated upstream
-    private let settingLabel: UILabel = {
-        let label = UILabel(frame: CGRect(origin: .zero, size: CGSize(width: 176, height: 24)))
-        label.text = "Высота"
-        label.textColor = .white
-=======
     private let dismissButton: UIButton = {
         let button = UIButton()
         let configuration = UIImage.SymbolConfiguration(pointSize: 20, weight: .bold, scale: .large)
@@ -35,20 +23,13 @@ class SettingsViewController: UIViewController {
     
     init(rocketLaunchData: [RocketLaunchData]?) {
         self.rocketLaunchData = rocketLaunchData
->>>>>>> Stashed changes
         
-        return label
-    }()
+        super.init(nibName: nil, bundle: nil)
+    }
     
-    private let segmentControll: UISegmentedControl = {
-        let segmentControll = UISegmentedControl(items: ["m", "ft"])
-        segmentControll.frame = CGRect(origin: .zero, size: CGSize(width: 115, height: 40))
-        segmentControll.tintColor = UIColor.black
-        segmentControll.backgroundColor = UIColor.white
-        segmentControll.selectedSegmentIndex = 1
-        
-        return segmentControll
-    }()
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     //MARK: - lifecycle
     override func viewDidLoad() {
@@ -56,23 +37,12 @@ class SettingsViewController: UIViewController {
         view.backgroundColor = .black
         addSubview()
         constraintsSetup()
-<<<<<<< Updated upstream
-=======
+        view.backgroundColor = .black
         tableViewSetup()
->>>>>>> Stashed changes
     }
     
     //MARK: - methods
     private func addSubview() {
-<<<<<<< Updated upstream
-        view.addSubview(titleLabel)
-        view.addSubview(backButton)
-        view.addSubview(settingLabel)
-        view.addSubview(segmentControll)
-    }
-    
-    private func constraintsSetup() {
-=======
         view.addSubview(launchSuccessTableView)
         view.addSubview(dismissButton)
     }
@@ -117,10 +87,13 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: RocketSuccessLaunchTableViewCell.identifier, for: indexPath) as? RocketSuccessLaunchTableViewCell else { return UITableViewCell() }
         
-        guard let rocketLaunchData = rocketLaunchData else { return UITableViewCell() }
+        cell.rocketLaunchConfigure(with: (rocketLaunchData?[indexPath.section])!)
         
-        cell.rocketLaunchConfigure(with: rocketLaunchData[indexPath.section])
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -131,10 +104,5 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 0
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
->>>>>>> Stashed changes
     }
 }

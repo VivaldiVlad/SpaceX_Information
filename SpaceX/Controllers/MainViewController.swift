@@ -19,7 +19,7 @@ class MainViewController: UIViewController {
         let page = UIPageControl()
         page.translatesAutoresizingMaskIntoConstraints = false
         page.backgroundColor = .black
-        page.numberOfPages = rocketData?.count ?? 0
+        page.numberOfPages = 3
         return page
     }()
     
@@ -74,7 +74,7 @@ class MainViewController: UIViewController {
 
 extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return rocketData?.count ?? 0
+        return pageControl.numberOfPages
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
