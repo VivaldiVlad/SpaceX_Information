@@ -38,10 +38,13 @@ class SettingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     }
     
     //MARK: - methods
 =======
+=======
+>>>>>>> Stashed changes
         view.backgroundColor = .black
         addSubview()
         constraintsSetup()

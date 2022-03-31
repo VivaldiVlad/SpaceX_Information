@@ -20,6 +20,9 @@
 		66E1F42627EEFE6F000741C1 /* RocketCharacteristicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E1F42527EEFE6F000741C1 /* RocketCharacteristicTableViewCell.swift */; };
 		66E3E69827F4420D00163123 /* RocketMass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E3E69727F4420D00163123 /* RocketMass.swift */; };
 		66E3E69A27F4448D00163123 /* RocketStagesInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E3E69927F4448D00163123 /* RocketStagesInfo.swift */; };
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 		86D42FC627EE0928004C2991 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D42FC527EE0928004C2991 /* AppDelegate.swift */; };
 		86D42FCA27EE0928004C2991 /* LoadDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D42FC927EE0928004C2991 /* LoadDataViewController.swift */; };
@@ -41,6 +44,9 @@
 		66E1F42527EEFE6F000741C1 /* RocketCharacteristicTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RocketCharacteristicTableViewCell.swift; path = SpaceX/CustomElements/tableViewCell/RocketCharacteristicTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		66E3E69727F4420D00163123 /* RocketMass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketMass.swift; sourceTree = "<group>"; };
 		66E3E69927F4448D00163123 /* RocketStagesInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketStagesInfo.swift; sourceTree = "<group>"; };
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 		86D42FC227EE0928004C2991 /* SpaceX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpaceX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86D42FC527EE0928004C2991 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -236,6 +242,9 @@
 				6628E2F927F4953000F46235 /* Date.swift in Sources */,
 				66C62EE227F08FBE001234A2 /* RocketsNetworkManager.swift in Sources */,
 				66D7EC9427F06EDB002EF4DF /* FirstStageTableViewCell.swift in Sources */,
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 				86D42FC627EE0928004C2991 /* AppDelegate.swift in Sources */,
 				66C782E127EE107F008010E8 /* SettingsViewController.swift in Sources */,
